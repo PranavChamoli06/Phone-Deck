@@ -1,0 +1,367 @@
+[
+    {
+        "id": "default",
+        "name": "Default",
+        "buttons": [
+            {
+                "id": "notepad",
+                "label": "Notepad",
+                "icon": "description",
+                "action": {
+                    "action": "application.notepad",
+                    "args": {}
+                }
+            },
+            {
+                "id": "calculator",
+                "label": "Calculator",
+                "icon": "calculate",
+                "action": {
+                    "action": "application.calculator",
+                    "args": {}
+                }
+            },
+            {
+                "id": "mute",
+                "label": "Mute",
+                "icon": "volume_off",
+                "action": {
+                    "action": "system.mute",
+                    "args": {}
+                }
+            },
+            {
+                "id": "github",
+                "label": "GitHub",
+                "icon": "code",
+                "action": {
+                    "action": "application.github",
+                    "args": {}
+                }
+            },
+            {
+                "id": "lock",
+                "label": "Lock",
+                "icon": "lock",
+                "action": {
+                    "action": "system.lock",
+                    "args": {}
+                }
+            },
+            {
+                "id": "sleep",
+                "label": "Sleep",
+                "icon": "bedtime",
+                "action": {
+                    "action": "system.sleep",
+                    "args": {}
+                }
+            },
+            {
+                "id": "restart",
+                "label": "Restart",
+                "icon": "restart_alt",
+                "action": {
+                    "action": "system.restart",
+                    "args": {}
+                }
+            },
+            {
+                "id": "shutdown",
+                "label": "Shutdown",
+                "icon": "power_settings_new",
+                "action": {
+                    "action": "system.shutdown",
+                    "args": {}
+                }
+            },
+            {
+                "id": "logoff",
+                "label": "Log Off",
+                "icon": "logout",
+                "action": {
+                    "action": "system.logoff",
+                    "args": {}
+                }
+            },
+            {
+                "id": "clipboard_get",
+                "label": "Get Clipboard",
+                "icon": "content_paste_search",
+                "action": {
+                    "action": "clipboard.get_text",
+                    "args": {}
+                }
+            },
+            {
+                "id": "clipboard_set",
+                "label": "Set Clipboard",
+                "icon": "content_copy",
+                "action": {
+                    "action": "clipboard.set_text",
+                    "args": {
+                        "text": "Hello from Phone Deck!"
+                    }
+                }
+            },
+            {
+                "id": "clipboard_clear",
+                "label": "Clear Clipboard",
+                "icon": "delete",
+                "action": {
+                    "action": "clipboard.clear",
+                    "args": {}
+                }
+            },
+            {
+                "id": "display_get",
+                "label": "Brightness",
+                "icon": "brightness_6",
+                "action": {
+                    "action": "display.get_brightness",
+                    "args": {}
+                }
+            },
+            {
+                "id": "display_set",
+                "label": "Set 50%",
+                "icon": "brightness_medium",
+                "action": {
+                    "action": "display.set_brightness",
+                    "args": {
+                        "level": 50
+                    }
+                }
+            },
+            {
+                "id": "display_up",
+                "label": "Brightness +",
+                "icon": "brightness_high",
+                "action": {
+                    "action": "display.brightness_up",
+                    "args": {
+                        "step": 10
+                    }
+                }
+            },
+            {
+                "id": "display_down",
+                "label": "Brightness -",
+                "icon": "brightness_low",
+                "action": {
+                    "action": "display.brightness_down",
+                    "args": {
+                        "step": 10
+                    }
+                }
+            },
+            {
+                "id": "display_screenshot",
+                "label": "Screenshot",
+                "icon": "photo_camera",
+                "action": {
+                    "action": "display.screenshot",
+                    "args": {}
+                }
+            },
+            {
+                "id": "display_region",
+                "label": "Region Shot",
+                "icon": "crop",
+                "action": {
+                    "action": "display.screenshot_region",
+                    "args": {
+                        "left": 100,
+                        "top": 100,
+                        "width": 800,
+                        "height": 600
+                    }
+                }
+            },
+            {
+                "id": "window_list",
+                "label": "Window List",
+                "icon": "window",
+                "action": {
+                    "action": "window.list",
+                    "args": {}
+                }
+            },
+            {
+                "id": "window_focus_calc",
+                "label": "Focus Calculator",
+                "icon": "filter_center_focus",
+                "action": {
+                    "action": "window.focus",
+                    "args": {
+                        "title": "Calculator"
+                    }
+                }
+            },
+            {
+                "id": "window_minimize_brave",
+                "label": "Minimize Brave",
+                "icon": "minimize",
+                "action": {
+                    "action": "window.minimize",
+                    "args": {
+                        "title": "Phone Deck Laptop Host - Swagger UI - Brave"
+                    }
+                }
+            },
+            {
+                "id": "window_maximize_brave",
+                "label": "Maximize Brave",
+                "icon": "crop_square",
+                "action": {
+                    "action": "window.maximize",
+                    "args": {
+                        "title": "Phone Deck Laptop Host - Swagger UI - Brave"
+                    }
+                }
+            },
+            {
+                "id": "window_restore_brave",
+                "label": "Restore Brave",
+                "icon": "flip_to_front",
+                "action": {
+                    "action": "window.restore",
+                    "args": {
+                        "title": "Phone Deck Laptop Host - Swagger UI - Brave"
+                    }
+                }
+            },
+            {
+                "id": "window_close_brave",
+                "label": "Close Brave",
+                "icon": "close",
+                "action": {
+                    "action": "window.close",
+                    "args": {
+                        "title": "Phone Deck Laptop Host - Swagger UI - Brave"
+                    }
+                }
+            },
+            {
+                "id": "window_switch_next",
+                "label": "Next Window",
+                "icon": "navigate_next",
+                "action": {
+                    "action": "window.switch_next",
+                    "args": {}
+                }
+            },
+            {
+                "id": "window_switch_previous",
+                "label": "Previous Window",
+                "icon": "navigate_before",
+                "action": {
+                    "action": "window.switch_previous",
+                    "args": {}
+                }
+            },
+            {
+                "id": "explorer_open_downloads",
+                "label": "Open Downloads",
+                "icon": "folder",
+                "action": {
+                    "action": "explorer.open",
+                    "args": {
+                        "path": "C:\\Users\\pranavchamoli\\OneDrive\\Documents"
+                    }
+                }
+            },
+            {
+                "id": "explorer_open_desktop",
+                "label": "Open Desktop",
+                "icon": "folder",
+                "action": {
+                    "action": "explorer.open",
+                    "args": {
+                        "path": "C:\\Users\\pranavchamoli\\Desktop"
+                    }
+                }
+            },
+            {
+                "id": "explorer_desktop",
+                "label": "Desktop",
+                "icon": "desktop_windows",
+                "action": {
+                    "action": "explorer.open_desktop",
+                    "args": {}
+                }
+            },
+            {
+                "id": "explorer_documents",
+                "label": "Documents",
+                "icon": "description",
+                "action": {
+                    "action": "explorer.open_documents",
+                    "args": {}
+                }
+            },
+            {
+                "id": "explorer_downloads",
+                "label": "Downloads",
+                "icon": "download",
+                "action": {
+                    "action": "explorer.open_downloads",
+                    "args": {}
+                }
+            },
+            {
+                "id": "explorer_pictures",
+                "label": "Pictures",
+                "icon": "image",
+                "action": {
+                    "action": "explorer.open_pictures",
+                    "args": {}
+                }
+            },
+            {
+                "id": "explorer_music",
+                "label": "Music",
+                "icon": "music_note",
+                "action": {
+                    "action": "explorer.open_music",
+                    "args": {}
+                }
+            },
+            {
+                "id": "explorer_videos",
+                "label": "Videos",
+                "icon": "movie",
+                "action": {
+                    "action": "explorer.open_videos",
+                    "args": {}
+                }
+            },
+            {
+                "id": "reveal_resume",
+                "label": "Reveal Resume",
+                "icon": "folder_open",
+                "action": {
+                    "action": "explorer.reveal",
+                    "args": {
+                        "path": "C:\\Users\\pranavchamoli\\OneDrive\\Documents\\PranavChamoli_Resume"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "gaming",
+        "name": "Gaming Profile",
+        "buttons": [
+            {
+                "id": "notepad2",
+                "label": "My Notepad",
+                "icon": "description",
+                "action": {
+                    "action": "application.notepad",
+                    "args": {}
+                }
+            }
+        ]
+    }
+]
