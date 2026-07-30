@@ -7,172 +7,258 @@
 *A modern, open-source alternative to the Elgato Stream Deck that transforms your Android phone into a customizable control surface for your Windows PC.*
 
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PySide6](https://img.shields.io/badge/PySide6-Desktop-41CD52?style=for-the-badge&logo=qt&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Phase%201%20Complete-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Phase%202%20Complete-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 </div>
 
 ---
 
-## 📖 Overview
+# 📖 Overview
 
-Phone Deck is an open-source ecosystem that lets you securely connect your Android phone to your Windows PC and use it as a customizable control deck. Inspired by the Elgato Stream Deck, it aims to provide powerful desktop automation without requiring dedicated hardware.
+Phone Deck is an open-source ecosystem that lets you securely connect your Android phone to your Windows PC and use it as a customizable desktop control deck.
 
-The project is built around a **plugin-first architecture**, making it easy to extend with new actions, integrations, and workflows.
+Inspired by the **Elgato Stream Deck**, Phone Deck aims to provide a powerful automation platform without requiring dedicated hardware.
 
-> **Current Status:** ✅ Phase 1 (FastAPI Backend) is complete. Android client and desktop host are planned for future phases.
+The project consists of three major components:
+
+- 🖥 **Desktop Application (PySide6)** – Modern desktop interface for managing devices, decks and actions.
+- ⚡ **FastAPI Backend** – Pairing, communication and device management server.
+- 📱 **Android Application** *(In Development)* – Mobile control surface used to trigger desktop actions.
+
+The application follows a **modular and event-driven architecture**, making it easy to extend with new actions, plugins and integrations.
+
+> **Current Status**
+>
+> ✅ **Phase 1 — Backend Foundation** completed.
+>
+> ✅ **Phase 2 — Desktop UI Foundation** completed.
+>
+> 🚧 Currently working on **Phase 3 — Communication Layer**.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### ✅ Implemented (Phase 1)
+## ✅ Implemented
+
+### Backend
 
 - 🔐 OTP-based secure device pairing
-- 🎛 Button & profile management
-- ⚡ Async runtime engine
-- 🔄 Real-time WebSocket synchronization
-- 🔌 Plugin framework
-- 🎵 Media controls
-- 🔊 Volume controls
-- 🪟 Window management
-- 📁 File Explorer shortcuts
-- 💡 Display & screenshot controls
-- 📋 Clipboard actions
-- ⚡ Power controls (shutdown, restart, sleep, lock)
+- 🌐 REST API built with FastAPI
+- 🔄 WebSocket communication
+- ❤️ Backend health monitoring
+- ⚡ Asynchronous architecture
 
-### 🚧 Planned
+### Desktop Application
+
+- 🖥 Modern PySide6 desktop application
+- 📊 Dashboard
+- 🔗 Device pairing page
+- 📱 Device management
+- 🎮 Deck management
+- ⚡ Actions page
+- ⚙ Settings page
+- 🧭 Sidebar navigation
+- 📡 Backend connection monitoring
+- 🎨 Reusable UI component library
+- 🌙 Modern dark theme
+
+---
+
+## 🚧 Currently In Development
 
 - Android application
-- Windows desktop host
+- Desktop ↔ Android communication layer
+- Persistent paired devices
+- Device heartbeat
+- Deck editor
+- Action execution engine
+
+---
+
+## 📅 Planned
+
 - Multi-page decks
 - Custom icons & themes
-- Plugin marketplace
 - OBS Studio integration
 - Spotify integration
 - Discord integration
+- Plugin marketplace
+- Cloud synchronization
 - AI-powered smart actions
-- Cloud profile synchronization
 - Cross-platform support
 
 ---
 
-## 🏗 Architecture
+# 🏗 Architecture
 
 ```text
-                 Android App (Future)
-                         │
-              HTTP / WebSockets
-                         │
-                         ▼
-               FastAPI Backend
-                         │
-          Runtime Engine & Plugin Manager
-                         │
-                         ▼
-               Windows System Plugins
-                         │
-                         ▼
-                 Windows Operating System
+                  Android Application
+                   (Under Development)
+                           │
+                   REST / WebSockets
+                           │
+        ┌──────────────────┴──────────────────┐
+        │                                     │
+        ▼                                     ▼
+ Desktop Application                  FastAPI Backend
+      (PySide6)                    Pairing & API Server
+        │
+        ▼
+ Windows Automation Engine
+        │
+        ▼
+ Windows Operating System
 ```
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
 | Category | Technologies |
-|----------|--------------|
-| Backend | Python, FastAPI, AsyncIO |
+|-----------|--------------|
+| Desktop | Python, PySide6 (Qt) |
+| Backend | Python, FastAPI |
 | Communication | REST API, WebSockets |
-| Windows Integration | pywin32, keyboard, ctypes, subprocess |
-| Architecture | Plugin-based, Async-first, Event-driven |
+| UI | Qt Widgets |
+| Architecture | Modular, Event-driven |
+| Platform | Windows |
 
 ---
 
-## 📂 Repository Structure
+# 📂 Repository Structure
 
 ```text
 Phone-Deck/
 │
-├── laptop-host/      # ✅ FastAPI Backend
-├── android/          # 🚧 Android Client (Planned)
-├── desktop/          # 🚧 Windows Desktop Host (Planned)
-├── docs/             # Documentation
-├── assets/           # Images & screenshots
+├── desktop-app/
+│   ├── ui/
+│   ├── services/
+│   ├── state/
+│   ├── assets/
+│   └── app.py
+│
+├── laptop-host/
+│   ├── app/
+│   ├── plugins/
+│   ├── requirements/
+│   └── requirements.txt
+│
+├── shared/
+│
+├── docs/
+│
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
-### Clone the repository
+## 1. Clone the repository
 
 ```bash
 git clone https://github.com/PranavChamoli06/Phone-Deck.git
 
-cd Phone-Deck/laptop-host
+cd Phone-Deck
 ```
 
-### Create a virtual environment
+---
+
+## 2. Run the Backend
 
 ```bash
+cd laptop-host
+
 python -m venv .venv
-```
 
-### Activate it
-
-```bash
 .venv\Scripts\activate
-```
 
-### Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
 
-### Configure environment
-
-```bash
-cp .env.example .env
-```
-
-### Run the backend
-
-```bash
 uvicorn app.main:app --reload
 ```
 
-Visit:
+Backend URLs:
 
-- Swagger UI → `http://127.0.0.1:8000/docs`
+- Swagger → `http://127.0.0.1:8000/docs`
 - ReDoc → `http://127.0.0.1:8000/redoc`
 
 ---
 
-## 🗺 Roadmap
+## 3. Run the Desktop Application
 
-- ✅ Phase 1 — FastAPI Backend
-- 🚧 Phase 2 — Android Client
-- 🚧 Phase 3 — Windows Desktop Host
-- 🚧 Phase 4 — Plugin Marketplace
-- 🚧 Phase 5 — Cloud Sync & AI Features
+```bash
+cd desktop-app
 
----
+python -m venv .venv
 
-## 🤝 Contributing
+.venv\Scripts\activate
 
-Contributions, ideas, bug reports, and feature requests are always welcome.
+pip install -r requirements.txt
 
-If you'd like to contribute, feel free to fork the repository, create a feature branch, and open a pull request.
+python app.py
+```
 
 ---
 
-## 📄 License
+# 📸 Screenshots
+
+### Desktop Application (Phase 2)
+
+> Screenshots will be added as development progresses.
+
+---
+
+# 🗺 Development Roadmap
+
+| Phase | Status |
+|--------|--------|
+| ✅ Phase 1 | Backend Foundation |
+| ✅ Phase 2 | Desktop UI Foundation |
+| 🚧 Phase 3 | Communication Layer |
+| 📅 Phase 4 | Android Application |
+| 📅 Phase 5 | Deck Editor |
+| 📅 Phase 6 | Windows Automation Engine |
+| 📅 Phase 7 | Plugin System |
+| 📅 Phase 8 | Cloud Sync & AI Features |
+
+---
+
+# 🎯 Upcoming Milestone
+
+The next milestone focuses on implementing real communication between the desktop application and Android device.
+
+This includes:
+
+- Device registration
+- Persistent paired devices
+- Heartbeat mechanism
+- WebSocket messaging protocol
+- Action dispatcher
+- First executable desktop actions
+
+---
+
+# 🤝 Contributing
+
+Contributions, feature requests and bug reports are always welcome.
+
+If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+---
+
+# 📄 License
 
 This project is licensed under the **MIT License**.
 
@@ -180,10 +266,10 @@ This project is licensed under the **MIT License**.
 
 <div align="center">
 
-### 👨‍💻 Author
+## 👨‍💻 Author
 
 **Pranav Chamoli**
 
-⭐ If you find this project interesting, consider giving it a star!
+If you found this project interesting, consider giving it a ⭐ on GitHub.
 
 </div>

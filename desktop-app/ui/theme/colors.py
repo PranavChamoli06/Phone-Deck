@@ -1,0 +1,22 @@
+# Application Background
+BACKGROUND = "#0A1020"
+
+# Floating Panels
+SURFACE = "#1A2233"
+SURFACE_LIGHT = "#222C40"
+
+# Accent
+PRIMARY = "#4F8CFF"
+PRIMARY_HOVER = "#6AA2FF"
+
+# Text
+TEXT_PRIMARY = "#F8FAFC"
+TEXT_SECONDARY = "#A8B3C7"
+
+# Status
+SUCCESS = "#22C55E"
+WARNING = "#FACC15"
+ERROR = "#EF4444"
+
+# Borders
+BORDER = "rgba(255,255,255,0.08)"

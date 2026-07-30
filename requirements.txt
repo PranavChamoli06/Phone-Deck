@@ -1,0 +1,3 @@
+-r requirements-host.txt
+-r requirements-desktop.txt
+-r requirements-dev.txt
