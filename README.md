@@ -209,9 +209,39 @@ python app.py
 
 # 📸 Screenshots
 
-### Desktop Application (Phase 2)
+## Dashboard
 
-> Screenshots will be added as development progresses.
+![Dashboard](assets/screenshots/dashboard.png)
+
+---
+
+## Device Pairing
+
+![Connect](assets/screenshots/connect.png)
+
+---
+
+## Device Management
+
+![Devices](assets/screenshots/devices.png)
+
+---
+
+## Deck Management
+
+![Decks](assets/screenshots/decks.png)
+
+---
+
+## Action Library
+
+![Actions](assets/screenshots/actions.png)
+
+---
+
+## Settings
+
+![Settings](assets/screenshots/settings.png)
 
 ---
 
