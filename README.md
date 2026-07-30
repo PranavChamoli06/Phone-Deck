@@ -211,37 +211,37 @@ python app.py
 
 ## Dashboard
 
-![Dashboard](assets/screenshots/dashboard.png)
+![Dashboard](assets/screenshot/dashboard.png)
 
 ---
 
 ## Device Pairing
 
-![Connect](assets/screenshots/connect.png)
+![Connect](assets/screenshot/connect.png)
 
 ---
 
 ## Device Management
 
-![Devices](assets/screenshots/devices.png)
+![Devices](assets/screenshot/devices.png)
 
 ---
 
 ## Deck Management
 
-![Decks](assets/screenshots/decks.png)
+![Decks](assets/screenshot/decks.png)
 
 ---
 
 ## Action Library
 
-![Actions](assets/screenshots/actions.png)
+![Actions](assets/screenshot/actions.png)
 
 ---
 
 ## Settings
 
-![Settings](assets/screenshots/settings.png)
+![Settings](assets/screenshot/settings.png)
 
 ---
 
