@@ -9,8 +9,9 @@
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PySide6](https://img.shields.io/badge/PySide6-Desktop-41CD52?style=for-the-badge&logo=qt&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Phase%202%20Complete-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Phase%203%20Communication%20Complete-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 </div>
@@ -19,100 +20,184 @@
 
 # 📖 Overview
 
-Phone Deck is an open-source ecosystem that lets you securely connect your Android phone to your Windows PC and use it as a customizable desktop control deck.
+Phone Deck is an open-source ecosystem that transforms your Android phone into a powerful desktop control deck inspired by the **Elgato Stream Deck**.
 
-Inspired by the **Elgato Stream Deck**, Phone Deck aims to provide a powerful automation platform without requiring dedicated hardware.
+Instead of requiring dedicated hardware, Phone Deck allows any Android device to securely connect to a Windows PC and execute customizable actions through a modern desktop management interface and a high-performance FastAPI backend.
 
-The project consists of three major components:
+The project follows a **modular**, **plugin-based**, and **event-driven** architecture, making it easy to extend with new actions, plugins, integrations, and automation workflows.
 
-- 🖥 **Desktop Application (PySide6)** – Modern desktop interface for managing devices, decks and actions.
-- ⚡ **FastAPI Backend** – Pairing, communication and device management server.
-- 📱 **Android Application** *(In Development)* – Mobile control surface used to trigger desktop actions.
+---
 
-The application follows a **modular and event-driven architecture**, making it easy to extend with new actions, plugins and integrations.
+# 🏗 Project Components
 
-> **Current Status**
->
-> ✅ **Phase 1 — Backend Foundation** completed.
->
-> ✅ **Phase 2 — Desktop UI Foundation** completed.
->
-> 🚧 Currently working on **Phase 3 — Communication Layer**.
+Phone Deck consists of three major applications.
+
+## 🖥 Desktop Application (PySide6)
+
+Provides a modern desktop interface used to:
+
+- Manage devices
+- Manage decks
+- Configure buttons
+- Browse available actions
+- Edit settings
+- Monitor backend connectivity
+
+---
+
+## ⚡ Laptop Host (FastAPI)
+
+Acts as the communication server responsible for:
+
+- REST API
+- WebSocket communication
+- Secure pairing
+- Authentication
+- Runtime action execution
+- Plugin management
+- Device communication
+
+---
+
+## 📱 Android Application *(Coming Next)*
+
+The Android application will become the actual control surface.
+
+Users will be able to:
+
+- Pair using OTP
+- Display dynamic decks
+- Execute desktop actions
+- Receive real-time updates
+- Control Windows remotely
+
+---
+
+# 📌 Current Development Status
+
+| Phase | Status |
+|--------|--------|
+| ✅ Phase 1 | Backend Foundation |
+| ✅ Phase 2 | Desktop UI Foundation |
+| ✅ Phase 3 | Communication & Authentication Foundation |
+| 🚧 Phase 4 | Android Application Development |
+| 📅 Future | Runtime Synchronization |
+| 📅 Future | Dynamic Deck Editor |
+| 📅 Future | Plugin Marketplace |
 
 ---
 
 # ✨ Features
 
-## ✅ Implemented
+## ✅ Completed
 
 ### Backend
 
-- 🔐 OTP-based secure device pairing
-- 🌐 REST API built with FastAPI
-- 🔄 WebSocket communication
-- ❤️ Backend health monitoring
-- ⚡ Asynchronous architecture
+- FastAPI REST API
+- Secure OTP-based pairing
+- WebSocket communication
+- JSON communication protocol
+- Protocol validation
+- Client session management
+- Connection management
+- Authentication over WebSocket
+- Generic action execution
+- Action Registry
+- Plugin architecture
+- Runtime state management
+- Event broadcasting
+- Asynchronous architecture
+- Backend health monitoring
+
+---
 
 ### Desktop Application
 
-- 🖥 Modern PySide6 desktop application
-- 📊 Dashboard
-- 🔗 Device pairing page
-- 📱 Device management
-- 🎮 Deck management
-- ⚡ Actions page
-- ⚙ Settings page
-- 🧭 Sidebar navigation
-- 📡 Backend connection monitoring
-- 🎨 Reusable UI component library
-- 🌙 Modern dark theme
+- Modern PySide6 desktop interface
+- Dashboard
+- Device page
+- Deck page
+- Actions page
+- Settings page
+- Sidebar navigation
+- Backend status indicator
+- Reusable UI components
+- Dark theme
+- Responsive layouts
 
 ---
 
-## 🚧 Currently In Development
+### Communication Layer
 
-- Android application
-- Desktop ↔ Android communication layer
-- Persistent paired devices
-- Device heartbeat
-- Deck editor
-- Action execution engine
+- REST communication
+- WebSocket endpoint
+- Connection manager
+- Ping / Pong heartbeat
+- Message routing
+- Protocol validation
+- OTP authentication
+- Runtime events
+- Generic action dispatcher
 
 ---
 
-## 📅 Planned
+# 🚧 Currently In Development
 
+The next milestone focuses on building the Android application.
+
+Planned features include:
+
+- Android application (Jetpack Compose)
+- Android ↔ Laptop communication
+- Runtime synchronization
+- Dynamic button rendering
+- Profile synchronization
+- Live deck updates
+- Mobile action execution
+
+---
+
+# 📅 Planned Features
+
+- Dynamic deck editor
 - Multi-page decks
-- Custom icons & themes
+- Drag-and-drop button editor
 - OBS Studio integration
 - Spotify integration
 - Discord integration
+- Visual Studio integration
 - Plugin marketplace
+- AI-assisted automation
 - Cloud synchronization
-- AI-powered smart actions
 - Cross-platform support
 
 ---
 
-# 🏗 Architecture
+# 🏗 High-Level Architecture
 
 ```text
                   Android Application
-                   (Under Development)
+                     (Controller)
                            │
-                   REST / WebSockets
+                   REST / WebSocket
                            │
-        ┌──────────────────┴──────────────────┐
-        │                                     │
-        ▼                                     ▼
- Desktop Application                  FastAPI Backend
-      (PySide6)                    Pairing & API Server
-        │
-        ▼
- Windows Automation Engine
-        │
-        ▼
- Windows Operating System
+             ┌─────────────┴─────────────┐
+             │                           │
+             ▼                           ▼
+     Desktop Application          Laptop Host
+         (PySide6)                 (FastAPI)
+             │
+             ▼
+      Action Registry
+             │
+             ▼
+        Plugin System
+             │
+             ▼
+      Windows Automation
+             │
+             ▼
+      Windows Operating System
 ```
 
 ---
@@ -124,8 +209,9 @@ The application follows a **modular and event-driven architecture**, making it e
 | Desktop | Python, PySide6 (Qt) |
 | Backend | Python, FastAPI |
 | Communication | REST API, WebSockets |
+| Runtime | AsyncIO |
 | UI | Qt Widgets |
-| Architecture | Modular, Event-driven |
+| Architecture | Modular, Event-driven, Plugin-based |
 | Platform | Windows |
 
 ---
@@ -136,10 +222,10 @@ The application follows a **modular and event-driven architecture**, making it e
 Phone-Deck/
 │
 ├── desktop-app/
+│   ├── assets/
 │   ├── ui/
 │   ├── services/
 │   ├── state/
-│   ├── assets/
 │   └── app.py
 │
 ├── laptop-host/
@@ -148,10 +234,9 @@ Phone-Deck/
 │   ├── requirements/
 │   └── requirements.txt
 │
-├── shared/
-│
 ├── docs/
 │
+├── ARCHITECTURE.md
 ├── LICENSE
 └── README.md
 ```
@@ -160,7 +245,7 @@ Phone-Deck/
 
 # 🚀 Getting Started
 
-## 1. Clone the repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/PranavChamoli06/Phone-Deck.git
@@ -170,7 +255,7 @@ cd Phone-Deck
 
 ---
 
-## 2. Run the Backend
+## 2. Start the Laptop Host
 
 ```bash
 cd laptop-host
@@ -181,17 +266,17 @@ python -m venv .venv
 
 pip install -r requirements.txt
 
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-Backend URLs:
+Available endpoints
 
-- Swagger → `http://127.0.0.1:8000/docs`
-- ReDoc → `http://127.0.0.1:8000/redoc`
+- Swagger UI → http://127.0.0.1:8000/docs
+- ReDoc → http://127.0.0.1:8000/redoc
 
 ---
 
-## 3. Run the Desktop Application
+## 3. Start the Desktop Application
 
 ```bash
 cd desktop-app
@@ -209,82 +294,178 @@ python app.py
 
 # 📸 Screenshots
 
-## Dashboard
+> Screenshots will be updated as new milestones are completed.
 
-![Dashboard](assets/screenshot/dashboard.png)
+## Phase 2 – Desktop UI
 
----
+| Dashboard | Device Management |
+|-----------|-------------------|
+| ![Dashboard](assets/screenshots/phase-2/dashboard.png) | ![Devices](assets/screenshots/phase-2/devices.png) |
 
-## Device Pairing
+| Deck Management | Action Library |
+|-----------------|----------------|
+| ![Decks](assets/screenshots/phase-2/decks.png) | ![Actions](assets/screenshots/phase-2/actions.png) |
 
-![Connect](assets/screenshot/connect.png)
-
----
-
-## Device Management
-
-![Devices](assets/screenshot/devices.png)
-
----
-
-## Deck Management
-
-![Decks](assets/screenshot/decks.png)
+| Settings |
+|----------|
+| ![Settings](assets/screenshots/phase-2/settings.png) |
 
 ---
 
-## Action Library
+# 🚀 Phase 3 Achievements
 
-![Actions](assets/screenshot/actions.png)
+Phase 3 focused on building the communication infrastructure that allows future desktop and Android clients to communicate with the Laptop Host.
+
+## ✅ Communication Layer
+
+- Designed a JSON-based communication protocol
+- Implemented protocol validation
+- Added WebSocket communication
+- Implemented connection management
+- Added client session management
+- Added heartbeat (PING/PONG)
+- Added structured message routing
 
 ---
 
-## Settings
+## ✅ Authentication
 
-![Settings](assets/screenshot/settings.png)
+- Secure OTP-based pairing
+- WebSocket authentication
+- Session management
+- Authentication validation
+- Secure pairing workflow
 
 ---
 
-# 🗺 Development Roadmap
+## ✅ Runtime Execution
+
+- Generic action execution
+- Action registry integration
+- Plugin-based execution
+- Runtime state manager
+- Runtime event broadcasting
+
+---
+
+## ✅ Architecture Improvements
+
+During development several architectural improvements were made.
+
+- Replaced standalone WebSocket server with FastAPI WebSocket endpoint
+- Unified pairing system
+- Introduced generic action execution
+- Modular message handlers
+- Cleaner communication layer
+- Event-driven backend architecture
+
+---
+
+# ⏳ Remaining Work for the Original Communication Phase
+
+The communication foundation is complete.
+
+The following desktop features were intentionally postponed until after the Android application is available.
+
+## Desktop Features
+
+- Device Manager UI
+- Deck Editor
+- Button Editor
+- Action Library UI
+- Desktop Notifications
+- Status Dashboard
+- Local Settings Storage
+- Local Cache
+- Desktop Logging
+- Runtime Synchronization UI
+
+These features depend on having an actual mobile client connected, making them much easier to build and test once the Android application is available.
+
+---
+
+# 📱 Next Milestone
+
+## Phase 4 – Android Application
+
+The next milestone introduces the Android controller application.
+
+Planned work includes:
+
+- Android project setup
+- Jetpack Compose UI
+- Material 3 design
+- WebSocket client
+- OTP pairing
+- Session management
+- Dynamic deck rendering
+- Runtime synchronization
+- Action execution
+- Live updates
+
+By the end of this milestone, users will be able to control their Windows PC directly from their Android device.
+
+---
+
+# 🗺 Updated Roadmap
 
 | Phase | Status |
 |--------|--------|
 | ✅ Phase 1 | Backend Foundation |
 | ✅ Phase 2 | Desktop UI Foundation |
-| 🚧 Phase 3 | Communication Layer |
-| 📅 Phase 4 | Android Application |
-| 📅 Phase 5 | Deck Editor |
-| 📅 Phase 6 | Windows Automation Engine |
-| 📅 Phase 7 | Plugin System |
-| 📅 Phase 8 | Cloud Sync & AI Features |
+| ✅ Phase 3 | Communication & Authentication Foundation |
+| 🚧 Phase 4 | Android Application |
+| 📅 Phase 5 | Desktop Feature Completion |
+| 📅 Phase 6 | Runtime Synchronization |
+| 📅 Phase 7 | Plugin Marketplace & Advanced Integrations |
 
 ---
 
-# 🎯 Upcoming Milestone
+# 🧪 Current Project Status
 
-The next milestone focuses on implementing real communication between the desktop application and Android device.
+## Backend
 
-This includes:
+- REST API
+- WebSocket Server
+- OTP Pairing
+- Authentication
+- Runtime Execution
+- Plugin Architecture
 
-- Device registration
-- Persistent paired devices
-- Heartbeat mechanism
-- WebSocket messaging protocol
-- Action dispatcher
-- First executable desktop actions
+**Status:** ✅ Stable
+
+---
+
+## Desktop Application
+
+- Modern UI
+- Navigation
+- Dashboard
+- Communication Foundation
+
+**Status:** 🚧 In Progress
+
+---
+
+## Android Application
+
+Not started.
+
+Will be developed in the next milestone.
 
 ---
 
 # 🤝 Contributing
 
-Contributions, feature requests and bug reports are always welcome.
+Contributions, feature requests, and bug reports are welcome.
 
-If you'd like to contribute:
+To contribute:
 
 1. Fork the repository.
-2. Create a feature branch.
+2. Create a new feature branch.
 3. Commit your changes.
-4. Open a Pull Request.
+4. Push your branch.
+5. Open a Pull Request.
 
 ---
 
@@ -298,8 +479,12 @@ This project is licensed under the **MIT License**.
 
 ## 👨‍💻 Author
 
-**Pranav Chamoli**
+### **Pranav Chamoli**
 
-If you found this project interesting, consider giving it a ⭐ on GitHub.
+B.Tech Computer Science Student
+
+Building an open-source alternative to the Elgato Stream Deck using Python, FastAPI, PySide6, and Android.
+
+If you like this project, consider giving it a ⭐ on GitHub.
 
 </div>
