@@ -31,13 +31,11 @@ class ButtonStateChangedEvent(Event):
     type: str = "button_state_changed"
     data: ButtonStateChangedData
 
-
 from app.models.profile import Button
 
 
 class RuntimeStateData(BaseModel):
     buttons: list[Button]
-
 
 class RuntimeStateEvent(Event):
     type: str = "runtime_state"

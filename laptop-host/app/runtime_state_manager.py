@@ -1,10 +1,14 @@
 from __future__ import annotations
 
 from app.models.profile import Button
+from app.models.runtime_snapshot import RuntimeSnapshot
 
 
 class RuntimeStateManager:
     def __init__(self):
+        self.profile = "Default"
+        self.page = "Home"
+
         self.button_states: dict[str, Button] = {}
 
     def get_button(
@@ -56,6 +60,7 @@ class RuntimeStateManager:
         Returns a copy of the current runtime button list.
         """
         return list(self.button_states.values())
+
 
     def initialize_profile(
         self,
