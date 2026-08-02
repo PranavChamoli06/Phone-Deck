@@ -11,61 +11,97 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import com.pranav.phone_deck.model.ConnectionState
 import com.pranav.phone_deck.ui.components.buttons.PrimaryButton
 import com.pranav.phone_deck.ui.components.cards.ConnectionStatusCard
+import com.pranav.phone_deck.ui.theme.PhoneDeckDimens
+import com.pranav.phone_deck.ui.theme.PhoneDeckStrings
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import com.pranav.phone_deck.repository.ConnectionRepository
 
 @Composable
 fun DashboardScreen() {
 
+    val viewModel: DashboardViewModel = viewModel()
+
+    val uiState by viewModel.uiState.collectAsState()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(24.dp),
+            .padding(PhoneDeckDimens.ScreenPadding),
 
         horizontalAlignment = Alignment.CenterHorizontally,
-
         verticalArrangement = Arrangement.Top
     ) {
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(
+            modifier = Modifier.height(
+                PhoneDeckDimens.LargeSpacing
+            )
+        )
 
         Text(
-            text = "Phone Deck",
+            text = PhoneDeckStrings.AppName,
             style = MaterialTheme.typography.displayLarge
         )
 
         Text(
-            text = "Android Companion",
+            text = PhoneDeckStrings.Companion,
             style = MaterialTheme.typography.bodyMedium
         )
 
-        Spacer(modifier = Modifier.height(32.dp))
-
-        ConnectionStatusCard(
-            connected = false
+        Spacer(
+            modifier = Modifier.height(
+                PhoneDeckDimens.ExtraLargeSpacing
+            )
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        ConnectionStatusCard(
+            connected = uiState.connectionState == ConnectionState.CONNECTED,
+            desktopName = uiState.desktopName
+        )
+
+        Spacer(
+            modifier = Modifier.height(
+                PhoneDeckDimens.LargeSpacing
+            )
+        )
 
         PrimaryButton(
-            text = "Pair Device"
+            text = PhoneDeckStrings.PairDevice
         ) {
+
+            ConnectionRepository.updateConnection(
+                ConnectionState.WAITING,
+                "Pranav-PC"
+            )
 
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(
+            modifier = Modifier.height(
+                PhoneDeckDimens.MediumSpacing
+            )
+        )
 
         PrimaryButton(
-            text = "Settings"
+            text = PhoneDeckStrings.Settings
         ) {
+
+            ConnectionRepository.updateConnection(
+                ConnectionState.CONNECTED,
+                "Pranav-PC"
+            )
 
         }
 
         Spacer(modifier = Modifier.weight(1f))
 
         Text(
-            text = "Version 1.0.0",
+            text = PhoneDeckStrings.Version,
             style = MaterialTheme.typography.bodyMedium
         )
     }
