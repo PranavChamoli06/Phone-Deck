@@ -15,7 +15,7 @@ fun ConnectionStatusCard(
     desktopName: String? = null
 ) {
 
-    PhoneDeckCard(
+    GlassCard(
         title = if (connected)
             "Connected"
         else

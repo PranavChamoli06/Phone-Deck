@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.pranav.phone_deck.ui.screens.dashboard.DashboardScreen
+import com.pranav.phone_deck.ui.screens.pairing.PairingScreen
 
 @Composable
 fun AppNavHost() {
@@ -18,6 +19,10 @@ fun AppNavHost() {
 
         composable(AppDestination.Dashboard.route) {
             DashboardScreen()
+        }
+
+        composable(AppDestination.Pairing.route) {
+            PairingScreen()
         }
 
     }

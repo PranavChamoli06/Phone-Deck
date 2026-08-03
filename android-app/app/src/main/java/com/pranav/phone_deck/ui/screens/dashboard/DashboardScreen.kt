@@ -20,6 +20,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import com.pranav.phone_deck.repository.ConnectionRepository
+import com.pranav.phone_deck.ui.screens.dashboard.DashboardViewModel
 
 @Composable
 fun DashboardScreen() {

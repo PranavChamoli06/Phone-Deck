@@ -11,5 +11,4 @@ sealed class AppDestination(val route: String) {
     data object DeviceInfo : AppDestination("device_info")
 
     data object About : AppDestination("about")
-
 }
