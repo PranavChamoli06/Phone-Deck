@@ -298,17 +298,20 @@ python app.py
 
 ## Phase 2 – Desktop UI
 
-| Dashboard | Device Management |
-|-----------|-------------------|
-| ![Dashboard](assets/screenshot/dashboard.png) | ![Devices](assets/screenshot/devices.png) |
+Dashboard
+![Dashboard](assets/screenshot/dashboard.png) 
 
-| Deck Management | Action Library |
-|-----------------|----------------|
-| ![Decks](assets/screenshot/decks.png) | ![Actions](assets/screenshot/actions.png) |
+Device Management
+![Devices](assets/screenshot/devices.png)
 
-| Settings |
-|----------|
-| ![Settings](assets/screenshot/settings.png) |
+Deck Management
+![Decks](assets/screenshot/decks.png) 
+
+Action Library
+![Actions](assets/screenshot/actions.png)
+
+Settings
+![Settings](assets/screenshot/settings.png)
 
 ---
 
