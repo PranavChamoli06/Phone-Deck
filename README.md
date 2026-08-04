@@ -483,16 +483,6 @@ This project is licensed under the **MIT License**.
 
 ---
 
-<div align="center">
-
 ## 👨‍💻 Author
 
 ### **Pranav Chamoli**
-
-B.Tech Computer Science Student
-
-Building an open-source alternative to the Elgato Stream Deck using Python, FastAPI, PySide6, and Android.
-
-If you like this project, consider giving it a ⭐ on GitHub.
-
-</div>
