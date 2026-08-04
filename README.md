@@ -300,15 +300,15 @@ python app.py
 
 | Dashboard | Device Management |
 |-----------|-------------------|
-| ![Dashboard](assets/screenshots/phase-2/dashboard.png) | ![Devices](assets/screenshots/phase-2/devices.png) |
+| ![Dashboard](assets/screenshot/phase-2/dashboard.png) | ![Devices](assets/screenshot/phase-2/devices.png) |
 
 | Deck Management | Action Library |
 |-----------------|----------------|
-| ![Decks](assets/screenshots/phase-2/decks.png) | ![Actions](assets/screenshots/phase-2/actions.png) |
+| ![Decks](assets/screenshot/phase-2/decks.png) | ![Actions](assets/screenshot/phase-2/actions.png) |
 
 | Settings |
 |----------|
-| ![Settings](assets/screenshots/phase-2/settings.png) |
+| ![Settings](assets/screenshot/phase-2/settings.png) |
 
 ---
 
