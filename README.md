@@ -299,18 +299,23 @@ python app.py
 ## Phase 2 – Desktop UI
 
 Dashboard
+
 ![Dashboard](assets/screenshot/dashboard.png) 
 
 Device Management
+
 ![Devices](assets/screenshot/devices.png)
 
 Deck Management
+
 ![Decks](assets/screenshot/decks.png) 
 
 Action Library
+
 ![Actions](assets/screenshot/actions.png)
 
 Settings
+
 ![Settings](assets/screenshot/settings.png)
 
 ---
