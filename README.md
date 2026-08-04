@@ -14,6 +14,11 @@
 ![Status](https://img.shields.io/badge/Status-Phase%203%20Communication%20Complete-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
+![Stars](https://img.shields.io/github/stars/PranavChamoli06/Phone-Deck?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/PranavChamoli06/Phone-Deck?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/PranavChamoli06/Phone-Deck?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/PranavChamoli06/Phone-Deck?style=for-the-badge)
+
 </div>
 
 ---
